@@ -1,0 +1,21 @@
+1. làm database
+	- có thiết kế ERD
+2. làm form giao diện
+- form trang chủ
+	+ đăng nhập (table: username, password, chức vụ)
+		- form admin:
+			+ sách / khách hàng / nhân viên: có các chức năng thêm, sửa, xóa, tìm kiếm
+			*+ thống kê : số lần khách hàng vào thư viện, sách được mua / mượn nhiều nhất, ... 		
+		- form nhân viên:
+			+ thông tin nhân viên
+			+ mượn sách 
+			+ mua sách
+			+ thêm, sửa, xóa sách / khách hàng
+			+ tìm kiếm sách / khách hàng
+		- form khách hàng: *nếu được thì chia guess / hội viên
+			+ thông tin khách hàng
+			+ xem thông tin sách đã mượn / mua
+			+ tìm kiếm sách
+	+ đăng ký
+
+3. 

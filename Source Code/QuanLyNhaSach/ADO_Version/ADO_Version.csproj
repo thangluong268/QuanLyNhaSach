@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{576223BC-33B0-449D-B1A5-ED310DF70C20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ADO_Version</RootNamespace>
+    <AssemblyName>ADO_Version</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BS layer\BLBorrow.cs" />
+    <Compile Include="BS layer\BLBorrowBill.cs" />
+    <Compile Include="BS layer\BLBorrowPay.cs" />
+    <Compile Include="BS layer\BLBuy.cs" />
+    <Compile Include="BS layer\BLBuyBill.cs" />
+    <Compile Include="BS layer\BLBuyPay.cs" />
+    <Compile Include="BS layer\BLCustomer.cs" />
+    <Compile Include="BS layer\BLFindBook.cs" />
+    <Compile Include="BS layer\BLForgetPassword.cs" />
+    <Compile Include="BS layer\BLLogin.cs" />
+    <Compile Include="BS layer\BLQLNV.cs" />
+    <Compile Include="BS layer\BLThongKe.cs" />
+    <Compile Include="DB layer\DBMain.cs" />
+    <Compile Include="View layer\Form_Thong_Ke_Doanh_Thu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Thong_Ke_Doanh_Thu.Designer.cs">
+      <DependentUpon>Form_Thong_Ke_Doanh_Thu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View layer\Form_Borrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Borrow.designer.cs">
+      <DependentUpon>Form_Borrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Borrow_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Borrow_Bill.designer.cs">
+      <DependentUpon>Form_Borrow_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Borrow_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Borrow_Pay.designer.cs">
+      <DependentUpon>Form_Borrow_Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Buy.designer.cs">
+      <DependentUpon>Form_Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Buy_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Buy_Bill.designer.cs">
+      <DependentUpon>Form_Buy_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Buy_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Buy_Pay.designer.cs">
+      <DependentUpon>Form_Buy_Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Customer.designer.cs">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Find_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Find_Book.designer.cs">
+      <DependentUpon>Form_Find_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Forget_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Forget_Password.designer.cs">
+      <DependentUpon>Form_Forget_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Home.designer.cs">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Login.designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Manager.designer.cs">
+      <DependentUpon>Form_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_QLNV.designer.cs">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View layer\Form_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View layer\Form_Staff.designer.cs">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View layer\Form_Thong_Ke_Doanh_Thu.resx">
+      <DependentUpon>Form_Thong_Ke_Doanh_Thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View layer\Form_Borrow.resx">
+      <DependentUpon>Form_Borrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Borrow_Bill.resx">
+      <DependentUpon>Form_Borrow_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Borrow_Pay.resx">
+      <DependentUpon>Form_Borrow_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Buy.resx">
+      <DependentUpon>Form_Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Buy_Bill.resx">
+      <DependentUpon>Form_Buy_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Buy_Pay.resx">
+      <DependentUpon>Form_Buy_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Customer.resx">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Find_Book.resx">
+      <DependentUpon>Form_Find_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Forget_Password.resx">
+      <DependentUpon>Form_Forget_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Home.resx">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Manager.resx">
+      <DependentUpon>Form_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_QLNV.resx">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View layer\Form_Staff.resx">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\backcolorlogin.png" />
+    <Content Include="Resources\icons8-eye-64.png" />
+    <Content Include="Resources\icons8-invisible-64.png" />
+    <Content Include="Resources\icons8-password-64.png" />
+    <Content Include="Resources\icons8-user-64 %281%29.png" />
+    <Content Include="Resources\icons8-user-64 %282%29.png" />
+    <Content Include="Resources\icons8-user-64.png" />
+    <Content Include="Resources\Login-Page.png" />
+    <Content Include="Resources\store_book.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

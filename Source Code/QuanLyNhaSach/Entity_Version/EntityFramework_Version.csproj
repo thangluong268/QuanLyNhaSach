@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{82D57EA8-8305-43BF-87FE-27359214F625}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>EntityFramework_Version</RootNamespace>
+    <AssemblyName>EntityFramework_Version</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1484.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BS Layer\Find_Book.cs" />
+    <Compile Include="BS Layer\Find_Pass.cs" />
+    <Compile Include="BS Layer\Login.cs" />
+    <Compile Include="BS Layer\Mua_Sach.cs" />
+    <Compile Include="BS Layer\Muon_Sach.cs" />
+    <Compile Include="BS Layer\Pay_Borrow.cs" />
+    <Compile Include="BS Layer\Pay_Buy.cs" />
+    <Compile Include="BS Layer\QLKhachHang.cs" />
+    <Compile Include="BS Layer\QLNV.cs" />
+    <Compile Include="BS Layer\Thong_Ke.cs" />
+    <Compile Include="DB Layer\CuonSach.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\DauSach.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\KhachHang.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\Mua.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\Muon.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\NhanVien.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\NXB.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\QLNhaSach.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaSach.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\QLNhaSach.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\QLNhaSach.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLNhaSach.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\TacGia.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="DB Layer\TaiKhoan.cs">
+      <DependentUpon>QLNhaSach.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
+    <Compile Include="View Layer\Form_Borrow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Borrow.Designer.cs">
+      <DependentUpon>Form_Borrow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Borrow_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Borrow_Bill.Designer.cs">
+      <DependentUpon>Form_Borrow_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Borrow_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Borrow_Pay.designer.cs">
+      <DependentUpon>Form_Borrow_Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy.Designer.cs">
+      <DependentUpon>Form_Buy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy_Bill.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy_Bill.designer.cs">
+      <DependentUpon>Form_Buy_Bill.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy_Pay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Buy_Pay.designer.cs">
+      <DependentUpon>Form_Buy_Pay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Customer.Designer.cs">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Staff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Staff.Designer.cs">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Find_Book.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Find_Book.Designer.cs">
+      <DependentUpon>Form_Find_Book.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Forget_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Forget_Password.Designer.cs">
+      <DependentUpon>Form_Forget_Password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Home.Designer.cs">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Login.Designer.cs">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Manager.Designer.cs">
+      <DependentUpon>Form_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_QLNV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_QLNV.Designer.cs">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View Layer\Form_Thong_Ke_Doanh_Thu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View Layer\Form_Thong_Ke_Doanh_Thu.Designer.cs">
+      <DependentUpon>Form_Thong_Ke_Doanh_Thu.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="View Layer\Form_Borrow.resx">
+      <DependentUpon>Form_Borrow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Borrow_Bill.resx">
+      <DependentUpon>Form_Borrow_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Borrow_Pay.resx">
+      <DependentUpon>Form_Borrow_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Buy.resx">
+      <DependentUpon>Form_Buy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Buy_Bill.resx">
+      <DependentUpon>Form_Buy_Bill.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Buy_Pay.resx">
+      <DependentUpon>Form_Buy_Pay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Customer.resx">
+      <DependentUpon>Form_Customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Staff.resx">
+      <DependentUpon>Form_Staff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Find_Book.resx">
+      <DependentUpon>Form_Find_Book.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Forget_Password.resx">
+      <DependentUpon>Form_Forget_Password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Home.resx">
+      <DependentUpon>Form_Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Login.resx">
+      <DependentUpon>Form_Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Manager.resx">
+      <DependentUpon>Form_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_QLNV.resx">
+      <DependentUpon>Form_QLNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View Layer\Form_Thong_Ke_Doanh_Thu.resx">
+      <DependentUpon>Form_Thong_Ke_Doanh_Thu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="DB Layer\QLNhaSach.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>QLNhaSach.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="DB Layer\QLNhaSach.edmx.diagram">
+      <DependentUpon>QLNhaSach.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DB Layer\QLNhaSach.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLNhaSach.edmx</DependentUpon>
+      <LastGenOutput>QLNhaSach.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="DB Layer\QLNhaSach.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>QLNhaSach.edmx</DependentUpon>
+      <LastGenOutput>QLNhaSach.cs</LastGenOutput>
+    </Content>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\backcolorlogin.png" />
+    <None Include="Resources\icons8-invisible-64.png" />
+    <None Include="Resources\icons8-eye-64.png" />
+    <None Include="Resources\icons8-password-64.png" />
+    <None Include="Resources\icons8-user-64 %282%29.png" />
+    <None Include="Resources\icons8-user-64 %281%29.png" />
+    <None Include="Resources\icons8-user-64.png" />
+    <None Include="Resources\login-page.png" />
+    <Content Include="Resources\store_book.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
